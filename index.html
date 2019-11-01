@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Yooth R.'s Resume</title>
+
+
+<style>
+* {
+  box-sizing: border-box;
+} 
+  
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+}
+a:link, a:visited {
+	background-color: #33CCFF;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 40px;
+}
+a:hover, a:active {
+	background-color: #00FFFF;
+}
+.main {
+  float:left;
+  width:70%;
+  padding:0 20px;
+}
+.foot {
+	background-color: #66FFFF;
+	float: left;
+	width: 100%;
+	padding: 5px;
+	margin-top: 7px;
+	text-align: center;
+}
+#btnChangeColor {
+	bottom: 50px;
+	right: 10px;
+	z-index: 99;
+	font-size: 10px;
+	background-color: #00CCFF;
+	color: black;
+	padding: 5px 10px;
+	border-radius: 40px;
+}
+#btnChangeColor:hover, #btnChangeColor:active {
+	background-color: #00FFFF;
+}
+#addskill {
+	bottom: 10px;
+	right: 10px;
+	z-index: 99;
+	font-size: 10px;
+	background-color: #00CCFF;
+	color: black;
+	padding: 5px 10px;
+	border-radius: 4px;
+  }
+ #removeskill {
+	bottom: 10px;
+	right: 10px;
+	z-index: 99;
+	font-size: 10px;
+	background-color: #FF66FF;
+	color: black;
+	padding: 5px 10px;
+	border-radius: 4px;
+  } 
+
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .foot {
+    width:100%;
+  }
+}
+</style>
+
+
+</head>
+
+  <body onload="checkEdits()" style="font-family:Verdana;color: gray; background-color:#ffffff; ">
+  
+
+
+  
+  
+<div class="container">
+  <img src="https://cdn1.imggmi.com/uploads/2019/10/31/e2dc5be4c8d6e4cd2d663e2c2a5187fa-full.jpg" border="0" class="image">
+
+</div>
+
+
+<div style="overflow:auto">
+  <div class="menu"  id="top">
+    <a href="#H1">PROFILE</a>
+    <a href="#H2">EDUCATION</a>
+    <a href="#H3">EXPERIENCES</a>
+    <a href="#H4">REFERENCES</a>
+    <br>
+    <br>
+    <div align="center">
+  <button type="button" id="btnChangeColor" onclick="changeBackgroundColor()" value="Day">Change color</button>
+ </div>
+ 
+  </div>
+
+
+
+
+
+  <div class="main">
+  
+ 
+
+    <h2 id="H1">PROFILE</h2>
+    <p>
+    
+<div>
+<h3><strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<span id="fullname" class="card-text text-center">Yongyooth Rojtanaworakun</span>
+    (
+    <span id="nickname" class="card-text text-center">Yooth</span>
+    )
+</strong>
+</h3>
+</div>
+
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="input-fullname" type="text " class="form-control " placeholder="Change fullname">
+	<button class="btn btn-outline-secondary " type="button " id="btn-change-fullname " onclick="changeFullname()">Submit</button>
+
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="input-nickname" type="text " class="form-control " placeholder="Change nickname">
+	<button class="btn btn-outline-secondary " type="button " id="btn-change-nickname" onclick="changeNickname()">Submit</button>
+</div>       
+                        
+                        
+<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hometown: Chonburi<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail: Yooth@live.com<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moile: 095-786-8151 
+</p>
+
+
+	<ul> 
+		<li><strong><em>Personality:</em></strong></li>
+		<ul>
+			<li>Able to work under pressure, good organizing, Multi-tasking and Problem solving skill.</li>
+			<li>Result-oriented, Fast learner, Energetic, Hard-working, Determined, Self-Motivation. </li>
+		</ul>
+	</ul>  
+    
+    	<ul> 
+		<li><strong><em>Language skills: </em></strong></li>
+		<ul>
+			<li>Good in English (Listening / Speaking / Reading / Writing). </li>
+		</ul>
+	</ul>
+
+	<ul> 
+		<li><strong><em>Excellent computer skills: </em></strong></li>
+		<ul>
+			<li>ERP-SAP, ERP-BAAN, ERP-CMMS (Ford).</li>
+			<li>BO (Business objects).</li>
+			<li>MES (Manufacturing Execution System).</li>
+			<li>Microsoft Office package.</li>
+		</ul>
+	</ul>
+          
+          
+          
+	<ul> 
+		<li><strong><em>Experience skills:</em></strong></li>
+    <ul id="skill" style="list-style-type:disc;">
+      <input type="text" id="inputskill"  />
+      <button onclick="addSkill()" id="addskill" title="add skill" >Add</button>
+      <button onclick="removeSkill()" id="removeskill">Remove</button>
+
+      		<li id="s1">Order and  Demand scheduling analyst.</li>
+			<li id="s2">Mass production  planning and controlling.</li>
+			<li id="s3">Engineering  production planning (Vendor controlling).</li>
+			<li id="s4">Import control  tower.</li>
+			<li id="s5">Export customer  services officer.</li>
+			<li id="s6">Plant analyst (Logistics and Inbound management).</li>
+    </ul> 
+	</ul>
+            
+<div align="right">
+  <a href="#top">UP</a>
+</div>    
+    
+
+
+
+
+
+
+
+
+
+
+    <br/>
+    <h2 id="H2">EDUCATION</h2>
+    <p>
+    
+		<ul>
+			<li>2015-2017:	Burapha University, Master of Business Administration, GPA: 3.85</li>
+			<li>2008-2010:	Sukhothai Thammathirat Open University (STOU), Bachelor of Public Health in Occupational Health and Safety Program (OHAS), GPA: 2.30</li>
+			<li>2007:		International Transport and Business School (ITBS / TIFFA / Department of Labor), (Jun-Oct, 2007)
+Certificate of International Transport and Business Course.</li>
+			<li>2002-2006:	Burapha University, Bachelor of Science in Faculty of Marine Technology, GPA: 3.37</li>
+		</ul>
+     
+    </p>
+    <br/>
+    
+<div align="right">
+  <a href="#top">UP</a>
+</div>
+    
+    
+    
+    <h2 id="H3">EXPERIENCES</h2>
+                <p>
+                <ul><li><strong><em>
+                Sep, 2007 – Jun, 2008: <br>
+                Export Customer Services and Coordinator: <br>
+                First Class Courier Service Co., Ltd. (Conair Inter-traffic Group)
+                </strong></em></li>
+                <ul>
+                <li>Coordinating with agencies (domestic and oversea) to exporting cargo to various destinations.</li> 
+<li>Managing and controlling delivery lead times to meet targets as customer requirement. </li>
+<li>Negotiating freight and cost with third party and supplier to optimize.</li>
+<li>Generating Bills of Lading, invoices and preparing any concerned documents to support customs clearance.</li>
+<li>Maintaining records and updating shipment information in the system and notifying concerned departments.</li>
+</ul>
+</ul>
+                </p>
+				<br/>
+
+
+
+                <p>
+                <ul><li><strong><em>
+                Jun, 2008 –Sep, 2010: <br>
+                Traffic and Inbound controlling officer: <br>
+                Microchip Technology (Thailand) Co., Ltd.
+                </strong></em></li>
+                <ul>
+<li>Be controlling tower to importing raw materials, spare parts, machines and parts returned to Thailand warehouse.</li> 
+<li>Controlling shipment lead times to meet target or expedite shipments to support urgent cases. </li>
+<li>Preparing various concerned documents such as invoice, BOI documents to support customs clearance. </li>
+<li>Maintaining records and updating shipment information in the system and notifying concerned departments. </li>
+<li>Leading concerned department to solve any shipment problem. Monitoring suppliers performance and provide KPI report.</li>
+</ul>
+</ul>
+                </p>
+				<br/>
+
+
+
+
+
+                <p>
+                <ul><li><strong><em>
+                Oct, 2010 –Dec, 2012:<br>
+                Outsource supply planning officer (Production planner): <br>
+                Microchip Technology (Thailand) Co., Ltd.
+                </strong></em></li>
+                <ul>
+<li>Coordinating with concerned department and supplier (local and oversea) in relation to assembly and develop new products. </li>
+<li>Controlling production cycle times to meet target, monitoring supplier performance and provide KPI report.</li>
+<li>Monitoring material in inventory to support production demand. Maintaining records and updating products information in the system.
+</li>
+</ul>
+</ul>
+                </p>
+				<br/>
+                
+                
+                
+                
+                
+      
+                <p>
+                <ul><li><strong><em>
+                Sep, 2007 – Jun, 2008:<br>
+                Production Planner (Order fulfillment officer):<br>
+                NXP Semiconductors (Thailand) Co., Ltd.
+                </strong></em></li>
+                <ul>
+<li>Confirming overall capacity to serve customer’s requirement (Coordinating with sales coordinators (oversea).</li>
+<li>Scheduling production loading plans and issuing to the production team.</li>
+<li>Monitoring production output to meet targets and expedite to support customer requirements.</li>
+<li>Controlling tower to solve any production problems.</li>
+<li>Reporting production output and production performance with KPI report.
+</li>  
+</ul>
+</ul>
+                </p>
+				<br/>
+                
+                
+    
+                
+                <p>
+                <ul><li><strong><em>
+                Jun, 2008 –Dec, 2012:<br>
+                Demand & Order Scheduling Analyst: <br>
+                Caterpillar (Thailand) Co., Ltd.
+                </strong></em></li>
+                <ul>
+<li>Developing MPS for Fabrication area including with operation of Welding, Machining, Shot-blasting and Painting in various product.</li>
+<li>Ensuring material availability with material planning section.</li>
+<li>Generating production order and controlling inventory level to optimize inventory cost.</li>
+<li>Controlling production output to meet target and generating KPI report.</li>
+<li>Confirming physical configuration as customer's changing requirement.</li>
+<li>Supporting improvement project in green belt level to develop organization in various area.</li>
+<li>Being the trainer for employee in yellow belt class (6 sigma).
+</li>  
+</ul>
+</ul>
+                </p>
+				<br/>
+                
+                
+                
+                
+                <p>
+                <ul><li><strong><em>
+                Dec, 2016 – Present: <br>
+                Senior Logistics Analyst (Plant Analyst):  <br>
+                Toll Logistics Thailand Co., Ltd.
+(On behalf of Penske logistics, Lead Logistics Provider of Ford Thailand Motor / FTM)
+                </strong></em></li>
+                <ul>
+<li>Be representative of Penske logistics (team stay in Chennai, India) to work in plant of customer (Ford Thailand Motor) at Auto Alliance Thailand (AAT) plant.</li>
+<li>Manage all of the inbound logistics network to serve Ford’s production line and export warehouse.</li>
+<li>Managing and ensuring the best logistics plan of materials is established with optimized logistics cost.</li>
+<li>Drive implementation of cost saving ideas for Total Value Management.</li>
+<li>Kick off new project of inbound logistics to support new sourcing suppliers and new products.</li>
+<li>Work with Cross Functional Team (Ford, Carriers, Suppliers) for network design improvement and maintain KPI performance.</li>
+<li>Aware forecasting in volumes changes to ensure the advancing network and transportation cost optimization.
+</li> 
+</ul>
+</ul>
+                </p>
+				<br/>
+            
+<div align="right">
+  <a href="#top">UP</a>
+</div>
+
+
+           
+    <h2 id="H4">REFERENCES</h2>
+                <p>
+                <ul>
+                <li>Mrs. Sirirat Bunnag, Logistics manager, Microchip Technology (Thailand) Co.,Ltd., Tel.084-665-6495.</li>
+<li>Mrs. Sirithorn Wiengpadi, Planning supervisor, Microchip Technology (Thailand) Co.,Ltd., Tel.038-857-119 Ext.1161.</li>
+<li>Mr. Kathawut Netiniyom, Supply Chain manager, TRW Steering & Suspension Co.,Ltd. (ZF TRW), Tel.081-864-6978.</li>
+</ul>
+                </p>
+				<br/>         
+                
+                
+<div align="right">
+  <a href="#top">UP</a>
+</div>
+
+    
+  </div>
+  
+  
+
+
+
+
+</div>
+
+
+
+  <div class="foot">
+    <h2>CONTACT</h2>
+    <p>Tel. 095-786-8151</P>
+    <p>Email : Yooth@live.com</p>
+  </div>
+
+
+
+
+    
+<script>
+
+  //Change Fullname-Nickname
+        function changeFullname() {
+            let val = document.getElementById("input-fullname").value;
+            if (val) {
+                document.getElementById("fullname").innerHTML = val;
+            }
+        }
+        function changeNickname() {
+            let val = document.getElementById("input-nickname").value;
+            if (val) {
+                document.getElementById("nickname").innerHTML = val;
+            }
+        }
+
+  //Change Background color 
+        function changeBackgroundColor() {
+            let col = document.getElementById("btnChangeColor").value;
+            if (col == "Day") {
+                document.getElementById("btnChangeColor").value = "Night";
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            } 
+			else if (col == "Night") {
+                document.getElementById("btnChangeColor").value = "Day";
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            }
+        }
+
+  //Add skills  
+function addSkill(){
+    var ul = document.getElementById("skill");
+    var inputskill = document.getElementById("inputskill");
+    var li = document.createElement("li");
+    li.setAttribute('id',inputskill.value);
+    li.appendChild(document.createTextNode(inputskill.value));
+    ul.appendChild(li);
+}
+function removeSkill(){
+    var ul = document.getElementById("skill");
+    var inputskill = document.getElementById("inputskill");
+    var item = document.getElementById(inputskill.value);
+    ul.removeChild(item);
+}
+</script>
+
+</body>
+</html>
